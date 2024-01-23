@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.nit.hk.collection","l":"NITCollection"}];updateSearchResults();
