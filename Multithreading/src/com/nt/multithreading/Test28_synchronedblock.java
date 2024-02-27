@@ -5,7 +5,8 @@ class Add3 {
 	private static int x;
 	private static int y;
 	
-	public static synchronized void add(int x , int y) {
+	//public static synchronized void add(int x , int y) {
+	public static void add(int x , int y) {
 		System.out.println("\n" + Thread.currentThread().getName() + " start");
 		Add3.x = x;
 		Add3.y = y;
