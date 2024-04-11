@@ -11,7 +11,7 @@ package com.nt.multithreading;
  *   
  * - to use CPU ideal time effectively and to run other 
  *   independent operations concurrently in complete
- *   project execution in less time, we must use multi threading 
+ *   project execution in less time, we must use multithreading 
  * 
  */
 public class Test01 {
