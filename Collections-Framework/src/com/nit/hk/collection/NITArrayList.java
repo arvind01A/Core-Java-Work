@@ -88,8 +88,8 @@ public class NITArrayList {
 	 */
 	@Override
 	public String toString() {
-		
-		/*	//String
+		/*
+			//String
 		  if(elementCount==0)
 			  return "[]";
 		  
@@ -98,8 +98,10 @@ public class NITArrayList {
 		  for (int i = 0; i <elementCount; i++) {
 			  Object obj=elementData[i];
 			  str=str.concat(obj==null?"null":elementData[i].toString());
-			  str=str.concat(", ");
+			  if(i < elementCount-1)
+				  str = str.concat(", ");
 		  } 
+		  str = str.concat("]");
 		 return str;
 		 */
 		
@@ -119,7 +121,7 @@ public class NITArrayList {
 		return sb.toString();
 		*/
 		
-				//String
+				//StringBuilder
 		  if(elementCount==0)
 			  return "[]";
 		  

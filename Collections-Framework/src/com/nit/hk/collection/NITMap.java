@@ -1,5 +1,7 @@
 package com.nit.hk.collection;
 
+import java.io.UncheckedIOException;
+
 public class NITMap {
 	private Object[] keys;
 	private Object[] values;
@@ -14,6 +16,10 @@ public class NITMap {
 	public void put(Object key, Object value) {
 		if(size == keys.length)
 			grow();
+		for(int i = 0; i < size; i++) {
+			if(keys[i]==key)
+				throw new IllegalArgumentException("Key is only unique value support");
+		}
 		keys[size] = key;
 		values[size] = value;
 		size++;
@@ -71,4 +77,29 @@ public class NITMap {
 			return false;
 		}
 	}
+	
+	public Object get(int index) {
+		if(index<0 || index>=size)
+			 throw new IndexOutOfBoundsException(index);
+		
+		return keys[index];
+	}
+	
+	public Object get(Object key) {
+		if(key == null) {
+			for (int i = 0; i < size; i++) {
+				if(key==keys[i])
+					return values[i];
+			}
+			return null;
+		} else {
+			for (int i = 0; i < size; i++) {
+				if(key.equals(keys[i]))
+					return values[i];
+			}
+			return null;
+		}
+	}
+	
+	
 }
